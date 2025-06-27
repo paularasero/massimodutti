@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f6f2ee;
+  font-weight: 400;
+  max-width: 100svw;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 400;
+}
+
+/* ========== HEADER ========== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7em 2.5em;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  width: 13em;
+}
+
+#menu {
+  width: 3em;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  margin: 0 1em;
+  font-size: 0.8em;
+}
+
+nav input {
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  padding: 0.2em 0;
+  background-color: transparent;
+  margin-right: 1.3em;
+}
+
+/* ========== BANNER SLIDER ========== */
+#slider {
+  width: 100%;
+  height: 40em;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.desvanecer {
+  transform: scale(1.02);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.aparecer {
+  transform: scale(1);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+
+/* ========== MODAL ========== */
+.modal-contenedor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-contenedor.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-caja {
+  background-color: white;
+  display: flex;
+  width: 50em;
+  overflow: hidden;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.modal-contenedor.active .modal-caja {
+  transform: scale(1);
+}
+
+.modal-info {
+  padding: 10em 3em;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-info h2 {
+  margin-bottom: 0.3em;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.modal-info h3 {
+  margin-bottom: 3em;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+}
+
+.modal-info h4 {
+  margin-top: 0.9em;
+  margin-bottom: 0.2em;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.modal-info p {
+  margin-bottom: 1em;
+  font-size: 0.7em;
+}
+
+.modal-info input {
+  padding: 0.4em;
+}
+
+.btn-suscribir {
+  border: 1px solid black;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  padding: 1em 1em;
+  position: relative;
+  top: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8em;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn-suscribir:hover{
+  background-color: white;
+  color: black;
+}
+
+.imagen-modal {
+  flex: 1;
+  background-image: url('');
+  background-size: cover;
+  background-position: center;
+  min-height: 40em;
+}
+
+.boton-cerrar {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  font-size: 24px;
+  color: black;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#countdown {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1.4em; 
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+  letter-spacing: 0.2em;
+}
+
+#inputEmail{
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  padding: 1.2em 0;
+  background-color: transparent;
+  text-transform: uppercase; 
+  font-size: 0.7em;
+  cursor: pointer;
+}
+
+/* ========== SECCIONES ========== */
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6em;
+  margin: 3em 0.5em;
+}
+
+.grid-item {
+  position: relative;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 40em;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.grid-item:hover img {
+  transform: scale(0.95);
+}
+
+.btnSecciones {
+  position: absolute;
+  top: 550px;
+  left: 600px;
+  padding: 3px 0;
+  border-bottom: 2px solid black;
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+  font-weight: 400;
+  transition: border-bottom-color 0.3s ease, color 0.3s ease;
+}
+
+.btnSecciones:hover {
+  color: rgb(202, 202, 202);
+  border-bottom-color: rgb(202, 202, 202);
+}
+
+/* ========== VIDEO ========== */
+#vidCatwalk {
+  width: 100%;
+}
+
+/* ========== FILTRO CATEGORÍA ========== */
+#filtro-categoria {
+  margin: 2rem 0;
+  padding: 0.75em 2.5em 0.75em 1em;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23222' stroke-width='1.5' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1em center;
+  cursor: pointer;
+}
+
+/* ========== CATÁLOGO ========== */
+.pagina-blanca {
+  background-color: white;
+}
+
+.pagina-blanca header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.pagina-blanca main {
+  margin: 8em 2em;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 3em 2em;
+}
+
+.product-image {
+  height: 352px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(0.95);
+}
+
+.product-info h2 {
+  margin-top: 0.5em;
+  font-size: 0.7em;
+  text-transform: uppercase;
+}
+
+.product-info p {
+  margin-top: 0.3em;
+  font-size: 0.75em;
+  font-weight: 700;
+}
+
+/* ========== NUEVA COLECCION========== */
+#nuevaColeccion{
+  margin-top: 2em;
+  padding: 4em 2em;
+  background-color: white;
+}
+
+#nuevaColeccion > h2 {
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 6em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4em;
+  height: 100vh;
+}
+
+#site-footer {
+  display: flex;
+  gap: 6em;
+}
+
+#site-footer img {
+  align-self: flex-start;
+  margin-right: 11em;
+}
+
+.footer-column h3 {
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85em;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+#footer-newsletter {
+  width: 100%;
+  max-width: 1200px;
+  border-top: 1px solid #444;
+  padding-top: 2em;
+  text-align: left;
+}
+
+#footer-newsletter h3 {
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+#footer-newsletter p {
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+#footer-newsletter a {
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  padding: 1em 3em;
+  justify-content: center;
+  position: relative;
+  top: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8em;
+}
+
+#footer-newsletter a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* ========== CONTACTO ========== */
+.formulario-contacto {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo-contacto {
+  display: flex;
+  justify-content: center; 
+  align-items: center;   
+  width: 50%;          
+}
+
+.logo-contacto img {
+  width: 30em;
+}
+
+.contenido-formulario {
+  width: 40%;
+  font-size: 0.95em;
+  line-height: 1.6;
+  margin: 6em 9em;
+  padding: 3em;
+}
+
+.contenido-formulario h2{
+  font-size: 0.85em;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.contenido-formulario p{
+  font-size: 0.85em;
+  margin-bottom: 2em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input, form select, form textarea {
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  padding: 1.2em 0;
+  background-color: transparent;
+  text-transform: uppercase; 
+  font-size: 0.7em;
+  cursor: pointer;
+}
+
+#mensaje {
+  resize: none;
+  font-family: "Inter", sans-serif;
+}
+
+#motivo{
+  color: #767676;
+}
+
+#labelCheckbox{
+  font-size: 0.9em;
+}
+
+.error {
+  color: red;
+  font-size: 0.4em;
+  font-weight: 300;
+}
+
+.input-correcto {
+  border-bottom: 2px solid green !important;
+}
+

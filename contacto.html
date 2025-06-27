@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massimo Dutti</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+</head>
+<body class="pagina-blanca">
+
+    <!-- ========== HEADER ========== -->
+    <header>
+        <div>
+            <a href="#">
+                <img src="img/Menu.png" alt="Menu" id="menu">
+            </a>
+            <a href="index.html">
+                <img src="img/Logo.png" alt="Logo" id="logo">
+            </a>
+        </div>
+        <nav>
+            <input type="text" placeholder="BUSCAR">
+            <a href="index.html">INICIO</a>
+            <a href="catalogo.html">CATÁLOGO</a>
+            <a href="contacto.html">CONTACTO</a>
+        </nav>
+    </header>
+
+    <!-- ========== FORMULARIO ========== -->
+    <section class="formulario-contacto">
+        <div class="logo-contacto">
+            <img src="img/Logo.png" alt="Logo Massimo Dutti">
+        </div>
+
+        <div class="contenido-formulario">
+            <h2>Atención al cliente</h2>
+            <p>Completá el siguiente formulario y nos contactaremos con vos.</p>
+
+            <form id="formContacto">
+            <input type="text" id="nombre" placeholder="Nombre completo" autocomplete="off">
+            <p id="mensajeNombre"></p>
+            <input type="email" id="email" placeholder="Correo electrónico" autocomplete="off">
+            <p id="mensajeEmail"></p>
+            <input type="text" id="celular" placeholder="Celular" autocomplete="off">
+            <p id="mensajeCelular"></p>
+            <input type="text" id="asunto" placeholder="Asunto de tu consulta" autocomplete="off">
+            <p id="mensajeAsunto"></p>
+            <select id="motivo">
+                <option value="">Seleccioná un motivo</option>
+                <option value="cambio">Cambio o devolución</option>
+                <option value="producto">Consulta sobre producto</option>
+                <option value="otros">Otros</option>
+            </select>
+            <p id="mensajeMotivo"></p>
+            <textarea id="mensaje" placeholder="Escribí tu mensaje aquí" autocomplete="off"></textarea>
+            <p id="mensajeMensaje"></p>
+            <div class="terminos">
+                <input type="checkbox" id="inpCheckbox" />
+                <label for="inpCheckbox" id="labelCheckbox">Declaro que he leído, comprendido y acepto los <a href="#">términos y condiciones</a> para enviar este formulario.</label>
+                <p id="mensajeCheckbox"></p>
+            </div>
+            <p id="mensajeGeneral"></p>
+
+            <button type="button" class="btn-suscribir">Enviar mensaje</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div id="site-footer">
+            <img src="img/Logo.svg" alt="Logo Massimo Dutti">
+            
+            <div class="footer-column">
+                <h3>AYUDA</h3>
+                <ul>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Accesibilidad</a></li>
+                    <li><a href="#">Rastrea tu pedido</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>LEGAL</h3>
+                <ul>
+                    <li><a href="#">Condiciones de compra</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Política de devoluciones</a></li>
+                    <li><a href="#">Información sobre cookies</a></li>
+                    <li><a href="#">Configuración de cookies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>EMPRESA</h3>
+                <ul>
+                    <li><a href="#">Descarga nuestra app</a></li>
+                    <li><a href="#">Sobre Massimo Dutti</a></li>
+                    <li><a href="#">Localizador de tiendas</a></li>
+                    <li><a href="#">Prensa</a></li>
+                    <li><a href="#">Envíanos tu CV</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="footer-newsletter">
+            <h3>NEWSLETTER</h3>
+            <p>Suscríbete a nuestro boletín</p>
+            <p>Te enviaremos información sobre nuestros nuevos productos y tendencias.</p>
+            <a href="#">Suscribirse</a>
+        </div>
+    </footer>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="js/contacto.js"></script>
+</body>
+</html>

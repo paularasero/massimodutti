@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massimo Dutti</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+</head>
+<body class="pagina-blanca">
+
+    <!-- ========== HEADER ========== -->
+    <header>
+        <div>
+            <a href="#">
+                <img src="img/Menu.png" alt="Menu" id="menu">
+            </a>
+            <a href="index.html">
+                <img src="img/Logo.png" alt="Logo" id="logo">
+            </a>
+        </div>
+        <nav>
+            <input type="text" placeholder="BUSCAR" autocomplete="off"  id="searchBar">
+            <a href="index.html">INICIO</a>
+            <a href="catalogo.html">CATÁLOGO</a>
+            <a href="contacto.html">CONTACTO</a>
+        </nav>
+    </header>
+
+    <!-- ========== FILTRO Y PRODUCTOS ========== -->
+    <main>
+        <select id="filtro-categoria">
+            <option value="todos">Todos</option>
+            <option value="Mujer">Mujer</option>
+            <option value="Hombre">Hombre</option>
+            <option value="Accesorio">Accesorios</option>
+            <option value="Bolsos">Bolsos</option>
+        </select>
+
+        <div class="product-grid">
+
+        </div>
+    </main>
+    
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div id="site-footer">
+            <img src="img/Logo.svg" alt="Logo Massimo Dutti">
+            <div class="footer-column">
+                <h3>AYUDA</h3>
+                <ul>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Accesibilidad</a></li>
+                    <li><a href="#">Rastrea tu pedido</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>LEGAL</h3>
+                <ul>
+                    <li><a href="#">Condiciones de compra</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Política de devoluciones</a></li>
+                    <li><a href="#">Información sobre cookies</a></li>
+                    <li><a href="#">Configuración de cookies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>EMPRESA</h3>
+                <ul>
+                    <li><a href="#">Descarga nuestra app</a></li>
+                    <li><a href="#">Sobre Massimo Dutti</a></li>
+                    <li><a href="#">Localizador de tiendas</a></li>
+                    <li><a href="#">Prensa</a></li>
+                    <li><a href="#">Envíanos tu CV</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="footer-newsletter">
+            <h3>NEWSLETTER</h3>
+            <p>Suscríbete a nuestro boletín</p>
+            <p>Te enviaremos información sobre nuestros nuevos productos y tendencias.</p>
+            <a href="#">Suscribirse</a>
+        </div>
+    </footer>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="js/datos.js"></script>
+    <script src="js/catalogo.js"></script>
+</body>
+</html>

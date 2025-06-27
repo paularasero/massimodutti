@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massimo Dutti</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header>
+        <div>
+            <a href="#">
+                <img src="img/Menu.png" alt="Menu" id="menu">
+            </a>
+            <a href="index.html">
+                <img src="img/Logo.png" alt="Logo" id="logo">
+            </a>
+        </div>
+        <nav>
+            <input type="text" placeholder="BUSCAR">
+            <a href="index.html">INICIO</a>
+            <a href="catalogo.html">CATÁLOGO</a>
+            <a href="contacto.html">CONTACTO</a>
+        </nav>
+    </header>
+
+    <!-- ========== MODAL ========== -->
+    <div class="modal-contenedor">
+        <div class="modal-caja">
+            <button class="boton-cerrar">&times;</button>
+            <div class="modal-info">
+                <h2>Última oportunidad</h2>
+                <h3>Suscribiéndote ahora recibís 10 € de descuento en tu próxima compra.</h3>
+                <h4>!Hasta agotar stock!</h4>
+                <h5 id="countdown"></h5>
+                <p>Ingresá tu correo electrónico para unirte a la comunidad de Massimo Dutti y recibir acceso anticipado a novedades, colecciones exclusivas y beneficios únicos.</p>       
+                <input type="email" id="inputEmail"  placeholder="Correo electrónico" autocomplete="off">
+                <p id="mensajeEmail"></p>
+                <a href="#" class="btn-suscribir">Suscribirme</a>
+            </div>
+            <div class="imagen-modal"></div>
+        </div>
+    </div>
+
+    <!-- ========== SLIDER ========== -->
+    <img id="slider" src="img/Slider1.png" alt=""><!-- colocar alt -->
+
+    <!-- ========== SECCIÓN DE PRODUCTOS EN GRID ========== -->
+    <section class="gridContainer">
+        <div class="grid-item">
+            <img src="img/women3.png" alt="Mujer">
+            <a href="catalogo.html?cat=Mujer" class="btnSecciones">MUJER</a>
+        </div>
+        <div class="grid-item">
+            <img src="img/men3.png" alt="Hombre">
+            <a href="catalogo.html?cat=Hombre" class="btnSecciones">HOMBRE</a>
+        </div>
+        <div class="grid-item">
+            <img src="img/accesories3.png" alt="Accesorios">
+            <a href="catalogo.html?cat=Accesorio" class="btnSecciones">ACCESORIOS</a>
+        </div>
+        <div class="grid-item">
+            <img src="img/bag3.png" alt="Bolsos">
+            <a href="catalogo.html?cat=Bolsos" class="btnSecciones">BOLSOS</a>
+        </div>
+    </section>
+
+    <!-- ========== VIDEO CATWALK ========== -->
+    <section>
+        <video id="vidCatwalk" src="img/video.mp4" autoplay loop muted></video>
+    </section>
+
+    <!-- ========== SECCIÓN NUEVA COLECCIÓN ========== -->
+    <section id="nuevaColeccion">
+        <h2>Nueva Colección</h2>
+        <div class="product-grid">
+
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div id="site-footer">
+            <img src="img/Logo.svg" alt="Logo Massimo Dutti">
+            
+            <div class="footer-column">
+                <h3>AYUDA</h3>
+                <ul>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Accesibilidad</a></li>
+                    <li><a href="#">Rastrea tu pedido</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>LEGAL</h3>
+                <ul>
+                    <li><a href="#">Condiciones de compra</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Política de devoluciones</a></li>
+                    <li><a href="#">Información sobre cookies</a></li>
+                    <li><a href="#">Configuración de cookies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>EMPRESA</h3>
+                <ul>
+                    <li><a href="#">Descarga nuestra app</a></li>
+                    <li><a href="#">Sobre Massimo Dutti</a></li>
+                    <li><a href="#">Localizador de tiendas</a></li>
+                    <li><a href="#">Prensa</a></li>
+                    <li><a href="#">Envíanos tu CV</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="footer-newsletter">
+            <h3>NEWSLETTER</h3>
+            <p>Suscríbete a nuestro boletín</p>
+            <p>Te enviaremos información sobre nuestros nuevos productos y tendencias.</p>
+            <a href="#">Suscribirse</a>
+        </div>
+    </footer>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="js/datos.js"></script>
+    <script src="js/js.js"></script>
+</body>
+</html>
